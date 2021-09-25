@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600&amp;display=swap"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css"
+      integrity="sha512-braXHF1tCeb8MzPktmUHhrjZBSZknHvjmkUdkAbeqtIrWwCchhcpUeAf2Sq3yIq1Q1x5PlroafjceOUbIE3Q5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Relatório GT</title>
+  </head>
+
+  <body class="font-sans antialiased">
+    <main class="">
+      <nav class="bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-between navbar">
+            <div class="flex space-x-7">
+              <div>
+                <a href="#" class="flex items-center py-4 px-2">
+                  <img
+                    src="./assets/img/logo.jpg"
+                    alt="Logo"
+                    class="h-12 w-12 mr-2"
+                  />
+                  <span class="font-semibold text-gray-500 titulo"
+                    >Interconexões Acadêmicas</span
+                  >
+                </a>
+              </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-3">
+              <div class="hidden md:flex items-center space-x-1">
+                <div class="links">
+                  <a
+                    href=""
+                    class="
+                      link
+                      py-4
+                      target-link
+                      text-center
+                      px-2
+                      text-green-500
+                      font-semibold
+                    "
+                    >Inicio</a
+                  >
+                </div>
+                <div class="links">
+                  <a
+                    href="#programacao"
+                    class="
+                      link
+                      py-4
+                      px-2
+                      text-center text-gray-500
+                      font-semibold
+                      hover:text-green-500
+                      transition
+                      duration-300
+                    "
+                    >Programação</a
+                  >
+                </div>
+                <div class="links">
+                  <a
+                    href=""
+                    class="
+                      link
+                      py-4
+                      px-2
+                      text-gray-500
+                      font-semibold
+                      hover:text-green-500
+                      transition
+                      duration-300
+                    "
+                    >Sobre</a
+                  >
+                </div>
+              </div>
+              <a
+                href=""
+                class="
+                  modal-open
+                  py-2
+                  px-2
+                  font-medium
+                  text-white
+                  bg-green-500
+                  rounded
+                  hover:bg-green-400
+                  transition
+                  duration-300
+                "
+                >Inscrição</a
+              >
+            </div>
+            <div class="md:hidden flex items-center">
+              <button class="outline-none mobile-menu-button">
+                <svg
+                  class="w-6 h-6 text-gray-500 hover:text-green-500"
+                  x-show="!showMenu"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--Modal-->
+        <div
+          class="
+            modal
+            opacity-0
+            pointer-events-none
+            fixed
+            w-full
+            h-full
+            top-0
+            left-0
+            flex
+            items-center
+            justify-center
+          "
+        >
+          <div
+            class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"
+          ></div>
+
+          <div
+            class="
+              modal-container
+              bg-white
+              w-11/12
+              md:max-w-md
+              mx-auto
+              rounded
+              shadow-lg
+              z-50
+              overflow-y-auto
+            "
+          >
+            <div
+              class="
+                modal-close
+                absolute
+                top-0
+                right-0
+                cursor-pointer
+                flex flex-col
+                items-center
+                mt-4
+                mr-4
+                text-white text-sm
+                z-50
+              "
+            >
+              <svg
+                class="fill-current text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                ></path>
+              </svg>
+              <span class="text-sm">(Esc)</span>
+            </div>
+
+            <div class="modal-content py-4 text-left px-6">
+              <form class="bg-white rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="username"
+                  >
+                    Nome completo
+                  </label>
+                  <input
+                    class="
+                      shadow
+                      appearance-none
+                      border
+                      rounded
+                      w-full
+                      py-2
+                      px-3
+                      text-gray-700
+                      leading-tight
+                      focus:outline-none focus:shadow-outline
+                    "
+                    id="username"
+                    type="text"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="CPF"
+                  >
+                    Escolaridade
+                  </label>
+                  <input
+                    class="
+                      shadow
+                      appearance-none
+                      border
+                      rounded
+                      w-full
+                      py-2
+                      px-3
+                      text-gray-700
+                      mb-3
+                      leading-tight
+                      focus:outline-none focus:shadow-outline
+                    "
+                    id="password"
+                    type="text"
+                  />
+                </div>
+                <!-- <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="CPF"
+                  >
+                    CPF
+                  </label>
+                  <input
+                    class="
+                      shadow
+                      appearance-none
+                      border
+                      rounded
+                      w-full
+                      py-2
+                      px-3
+                      text-gray-700
+                      mb-3
+                      leading-tight
+                      focus:outline-none focus:shadow-outline
+                    "
+                    id="password"
+                    type="text"
+                  />
+                </div> -->
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="CPF"
+                  >
+                    Data de nascimento
+                  </label>
+                  <input
+                    class="
+                      shadow
+                      appearance-none
+                      border
+                      rounded
+                      w-full
+                      py-2
+                      px-3
+                      text-gray-700
+                      mb-3
+                      leading-tight
+                      focus:outline-none focus:shadow-outline
+                    "
+                    id="password"
+                    type="date"
+                  />
+                </div>
+                <div class="flex items-center justify-between">
+                  <button
+                    class="
+                      bg-blue-500
+                      hover:bg-blue-700
+                      text-white
+                      font-bold
+                      disabled
+                      py-2
+                      px-4
+                      rounded
+                      focus:outline-none focus:shadow-outline
+                    "
+                    type="submit"
+                    disabled
+                  >
+                    Confirmar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usar um navbar mais moderno com CSS puro -->
+        <div class="hidden mobile-menu">
+          <ul class="">
+            <li class="active">
+              <a
+                href="index.html"
+                class="
+                  block
+                  text-sm
+                  hover:bg-green-500 hover:text-white
+                  px-2
+                  py-4
+                  font-semibold
+                "
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="
+                  block
+                  text-sm
+                  px-2
+                  py-4
+                  hover:bg-green-500 hover:text-white
+                  font-semibold
+                  transition
+                  duration-300
+                "
+                >Calendário</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="
+                  block
+                  text-sm
+                  px-2
+                  py-4
+                  hover:bg-green-500 hover:color-white
+                  font-semibold
+                  transition
+                  duration-300
+                "
+                >Sobre</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section
+        class="container hero mx-auto sm:px-12 xl:px-48 py-24 px-12 md:py-44 sm:py-44 xl:py-72"
+      >
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div class="space-y-8 lg:space-y-12">
+            <div class="space-y-6">
+              <h1 class="text-2xl sm:text-4xl font-semibold">
+                Psicologia complexa & Interconexões acadêmicas do GT-AION no
+                Brasil: <br> Norte, Nordeste, Centro-Oeste, Sudeste e Sul
+              </h1>
+              <!-- <p class="max-w-md text-xl">
+                Psicologia complexa & Interconexões acadêmicas do GT-AION no
+                Brasil: Norte, Nordeste, Centro-Oeste, Sudeste e Sul
+              </p> -->
+            </div>
+            <div class="flex flex-col sm:flex-row space-y-2.5 sm:space-y-0">
+              <a
+                href="#programacao"
+                class="
+                  bg-green-600
+                  hover:bg-green-700
+                  transition-colors
+                  duration-300
+                  py-4
+                  px-6
+                  rounded-lg
+                  text-white
+                  font-semibold
+                "
+              >
+                Programação
+              </a>
+            </div>
+          </div>
+          <div>
+            <img
+              class="hero-img"
+              src="assets/img/hero2.svg"
+              alt="Illustration"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="
+          dias
+          container
+          mx-auto
+          px-4
+          py-12
+          sm:py-16
+          md:py-20
+          xl:py-28
+          space-y-12
+          sm:space-y-16
+          xl:space-y-24
+        "
+      >
+        <div
+          class="container mx-auto px-4 py-12 sm:py-16 md:py-20 xl:py-28"
+          id="programacao"
+        >
+          <div class="space-y-4 mb-10 lg:mb-16">
+            <h2 class="text-4xl text-center md:text-5xl font-semibold">
+              Programação do Evento
+            </h2>
+            <p class="text-lg md:max-w-md mx-auto">
+              O Evento vai ocorrer entre os dias 18 e 22 de Outubro
+            </p>
+          </div>
+          <div
+            class="
+              grid
+              button-group
+              filters-button-group
+              sm:grid-cols-2
+              xl:grid-cols-6
+              gap-6
+              lg:gap-10
+            "
+          >
+            <button
+              data-filter="*"
+              class="
+                is-checked
+                bg-white
+                transition-shadow
+                duration-200
+                shadow
+                hover:shadow-xl
+                p-6
+                rounded-lg
+                space-y-6
+              "
+            >
+              <div class="space-y-4">
+                <h4 class="text-2xl text-center md:text-3xl font-semibold">
+                  Todos
+                </h4>
+              </div>
+            </button>
+            <button
+              data-filter=".norte"
+              class="
+                bg-white
+                transition-shadow
+                duration-200
+                shadow
+                hover:shadow-xl
+                p-6
+                rounded-lg
+                space-y-6
+              "
+            >
+              <div class="space-y-4">
+                <h4 class="text-2xl text-center md:text-3xl font-semibold">
+                  Norte
+                </h4>
+              </div>
+            </button>
+            <button
+              data-filter=".nordeste"
+              class="
+                bg-white
+                transition-shadow
+                duration-200
+                shadow
+                hover:shadow-xl
+                p-6
+                rounded-lg
+                space-y-6
+              "
+            >
+              <div class="space-y-4">
+                <h4 class="text-2xl text-center md:text-3xl font-semibold">
+                  Nordeste
+                </h4>
+              </div>
+            </button>
+            <button
+              data-filter=".centro-oeste"
+              class="
+                bg-white
+                transition-shadow
+                duration-200
+                shadow
+                hover:shadow-xl
+                p-6
+                rounded-lg
+                space-y-6
+              "
+            >
+              <div class="space-y-4">
+                <h4 class="text-2xl text-center md:text-3xl font-semibold">
+                  Centro-oeste
+                </h4>
+              </div>
+            </button>
+            <button
+              data-filter=".sudeste"
+              class="
+                bg-white
+                transition-shadow
+                duration-200
+                shadow
+                hover:shadow-xl
+                p-6
+                rounded-lg
+                space-y-6
+              "
+            >
+              <div class="space-y-4">
+                <h4 class="text-2xl text-center md:text-3xl font-semibold">
+                  Sudeste
+                </h4>
+              </div>
+            </button>
+            <button
+              data-filter=".sul"
+              class="
+                bg-white
+                transition-shadow
+                duration-200
+                shadow
+                hover:shadow-xl
+                p-6
+                rounded-lg
+                space-y-6
+              "
+            >
+              <div class="space-y-4">
+                <h4 class="text-2xl text-center md:text-3xl font-semibold">
+                  Sul
+                </h4>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="norte dia-item" data-category="norte">
+          <h1 class="lg:text-4xl text-center md:text-4xl font-semibold">
+            Segunda-feira, 18 de Outubro
+          </h1>
+          <div class="timeline">
+            <div
+              class="timeline__event animated fadeInUp timeline__event--type1"
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-1s
+                timeline__event--type2
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="lni lni-coffee-cup"></i>
+              </div>
+              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">
+                  Intervalo
+                  <span class="relogio">
+                    <svg
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                    >
+                      <rect
+                        width="16"
+                        height="16"
+                        x="4"
+                        y="4"
+                        stroke="#0A0A30"
+                        stroke-width="1.5"
+                        rx="8"
+                      />
+                      <path
+                        stroke="#0A0A30"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                        d="M12.021 12l2.325 2.325"
+                      />
+                      <path
+                        stroke="#265BFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M12.021 12V6.84"
+                        style="
+                          animation: rotate 2s linear infinite both;
+                          transform-origin: center;
+                        "
+                      />
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-2s
+                timeline__event--type3
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-3s
+                timeline__event--type1
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nordeste dia-item" data-category="nordeste">
+          <h1 class="lg:text-4xl text-center md:text-4xl font-semibold">
+            Terça-feira, 19 de Outubro
+          </h1>
+          <div class="timeline">
+            <div
+              class="timeline__event animated fadeInUp timeline__event--type1"
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-1s
+                timeline__event--type2
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="lni lni-coffee-cup"></i>
+              </div>
+              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">
+                  Intervalo
+                  <span class="relogio">
+                    <svg
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                    >
+                      <rect
+                        width="16"
+                        height="16"
+                        x="4"
+                        y="4"
+                        stroke="#0A0A30"
+                        stroke-width="1.5"
+                        rx="8"
+                      />
+                      <path
+                        stroke="#0A0A30"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                        d="M12.021 12l2.325 2.325"
+                      />
+                      <path
+                        stroke="#265BFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M12.021 12V6.84"
+                        style="
+                          animation: rotate 2s linear infinite both;
+                          transform-origin: center;
+                        "
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-2s
+                timeline__event--type3
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-3s
+                timeline__event--type1
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="centro-oeste dia-item" data-category="centro-oeste">
+          <h1 class="lg:text-4xl text-center md:text-4xl font-semibold">
+            Quarta-feira, 20 de Outubro
+          </h1>
+          <div class="timeline">
+            <div
+              class="timeline__event animated fadeInUp timeline__event--type1"
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-1s
+                timeline__event--type2
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="lni lni-coffee-cup"></i>
+              </div>
+              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">
+                  Intervalo
+                  <span class="relogio">
+                    <svg
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                    >
+                      <rect
+                        width="16"
+                        height="16"
+                        x="4"
+                        y="4"
+                        stroke="#0A0A30"
+                        stroke-width="1.5"
+                        rx="8"
+                      />
+                      <path
+                        stroke="#0A0A30"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                        d="M12.021 12l2.325 2.325"
+                      />
+                      <path
+                        stroke="#265BFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M12.021 12V6.84"
+                        style="
+                          animation: rotate 2s linear infinite both;
+                          transform-origin: center;
+                        "
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-2s
+                timeline__event--type3
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-3s
+                timeline__event--type1
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sudeste dia-item" data-category="sudeste">
+          <h1 class="lg:text-4xl text-center md:text-4xl font-semibold">
+            Quinta-feira, 21 de Outubro
+          </h1>
+          <div class="timeline">
+            <div
+              class="timeline__event animated fadeInUp timeline__event--type1"
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-1s
+                timeline__event--type2
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="lni lni-coffee-cup"></i>
+              </div>
+              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">
+                  Intervalo
+                  <span class="relogio">
+                    <svg
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                    >
+                      <rect
+                        width="16"
+                        height="16"
+                        x="4"
+                        y="4"
+                        stroke="#0A0A30"
+                        stroke-width="1.5"
+                        rx="8"
+                      />
+                      <path
+                        stroke="#0A0A30"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                        d="M12.021 12l2.325 2.325"
+                      />
+                      <path
+                        stroke="#265BFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M12.021 12V6.84"
+                        style="
+                          animation: rotate 2s linear infinite both;
+                          transform-origin: center;
+                        "
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-2s
+                timeline__event--type3
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-3s
+                timeline__event--type1
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sul dia-item" data-category="sul">
+          <h1 class="lg:text-4xl text-center md:text-4xl font-semibold">
+            Sexta-feira, 22 de Outubro
+          </h1>
+          <div class="timeline">
+            <div
+              class="timeline__event animated fadeInUp timeline__event--type1"
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-1s
+                timeline__event--type2
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="lni lni-coffee-cup"></i>
+              </div>
+              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">
+                  Intervalo
+                  <span class="relogio">
+                    <svg
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                    >
+                      <rect
+                        width="16"
+                        height="16"
+                        x="4"
+                        y="4"
+                        stroke="#0A0A30"
+                        stroke-width="1.5"
+                        rx="8"
+                      />
+                      <path
+                        stroke="#0A0A30"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                        d="M12.021 12l2.325 2.325"
+                      />
+                      <path
+                        stroke="#265BFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M12.021 12V6.84"
+                        style="
+                          animation: rotate 2s linear infinite both;
+                          transform-origin: center;
+                        "
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-2s
+                timeline__event--type3
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                timeline__event
+                animated
+                fadeInUp
+                delay-3s
+                timeline__event--type1
+              "
+            >
+              <div class="timeline__event__icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__content">
+                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
+                    iure veniam corporis incidunt reprehenderit accusantium id
+                    aut architecto harum quidem dolorem in!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <a
+        href="#"
+        class="back-to-top d-flex align-items-center justify-content-center"
+        ><i class="fas fa-arrow-up"></i
+      ></a>
+    </main>
+    <footer>
+      <p>
+        Universidade Federal Rural do Rio de Janeiro. Site desenvolvido por
+        Victor Batista
+      </p>
+    </footer>
+  </body>
+  <script src="./assets/js/modal.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</html>

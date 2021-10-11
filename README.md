@@ -1,7 +1,7 @@
 <h1 align="left">
   <a href="https://prototipo-gtaion.netlify.app/"> 🤝 I Encontro GT-AION</a>
 </h1>
-<img src="![image](https://user-images.githubusercontent.com/54453426/136752366-e468eaed-fea8-45a8-ae94-58462f0ad99e.png)" />
+<img src="https://user-images.githubusercontent.com/54453426/136752366-e468eaed-fea8-45a8-ae94-58462f0ad99e.png" />
 
 ## Descrição:
 

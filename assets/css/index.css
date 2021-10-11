@@ -10,6 +10,16 @@ html {
   font-size: 14px;
 }
 
+.regiao{
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.regiao-nordeste{
+  width: 30%;
+}
+
 .tema{
   text-transform: none !important;
   margin-bottom: 5px;

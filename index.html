@@ -29,13 +29,7 @@
 
     <link rel="stylesheet" href="./assets/css/index.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css"
-      integrity="sha512-braXHF1tCeb8MzPktmUHhrjZBSZknHvjmkUdkAbeqtIrWwCchhcpUeAf2Sq3yIq1Q1x5PlroafjceOUbIE3Q5g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -409,10 +403,15 @@
           <div class="space-y-8 lg:space-y-12">
             <div class="space-y-6">
               <h1 class="text-2xl sm:text-4xl font-semibold">
-                I ENCONTRO DO GT-AION:
+                I ENCONTRO DO GT-AION / ANPEPP:
                 <br />Interdisciplinaridade da Pesquisa em Psicologia Analítica
                 no Brasil (Norte, Nordeste, Centro-Oeste, Sudeste e Sul)
+                <template class="funciona-teste">
+                  <h1 class="text-xl sm:text-4xl font-semibold">Funciona</h1>
+                </template>
+                <funciona-teste />
               </h1>
+
               <!-- <p class="max-w-md text-xl">
                 Psicologia complexa & Interconexões acadêmicas do GT-AION no
                 Brasil: Norte, Nordeste, Centro-Oeste, Sudeste e Sul
@@ -440,7 +439,7 @@
           <div>
             <img
               class="hero-img"
-              src="assets/img/hero2.svg"
+              src="assets/img/hero.png"
               alt="Illustration"
             />
           </div>
@@ -613,7 +612,7 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__date">10:00 - 12:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">Mesa virtual</div>
                 <div class="timeline__event__description">
@@ -638,7 +637,7 @@
               <div class="timeline__event__icon">
                 <i class="lni lni-coffee-cup"></i>
               </div>
-              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__date">12:00 - 14:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">
                   Intervalo
@@ -683,9 +682,6 @@
                 <div class="timeline__event__description">
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
                   </p>
                 </div>
               </div>
@@ -702,40 +698,18 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__date">14:00 - 16:00</div>
               <div class="timeline__event__content">
-                <div class="timeline__event__title">Mesa virtual</div>
-                <div class="timeline__event__description">
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
-                  </p>
+                <div class="timeline__event__title">
+                  Mesa virtual
+                  <p class="tema">Mitologia, símbolo e transformação da Alma</p>
                 </div>
-              </div>
-            </div>
-            <div
-              class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-3s
-                timeline__event--type1
-              "
-            >
-              <div class="timeline__event__icon">
-                <i class="fas fa-chalkboard-teacher"></i>
-              </div>
-              <div class="timeline__event__date">17:00 - 18:00</div>
-              <div class="timeline__event__content">
-                <div class="timeline__event__title">Mesa virtual</div>
                 <div class="timeline__event__description">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
+                    <strong>Comunicação:</strong> Sandra Morales Mercado; Nelson
+                    Nunes; Renato Santiago Bandola de Oliveira <br />
+                    <strong>Coordenação:</strong> Prof. Dr.
+                    <strong>José Jorge M. Zacharias</strong> (AJB)
                   </p>
                 </div>
               </div>
@@ -753,15 +727,23 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__date">10:00 - 12:00</div>
               <div class="timeline__event__content">
-                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__title">
+                  Mesa virtual <br />
+                  <p class="tema">
+                    A psicologia complexa e o PPG em Ciência da Religião da
+                    PUC-Minas
+                  </p>
+                </div>
                 <div class="timeline__event__description">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
+                    <strong>Comunicação:</strong> Prof. Dr.
+                    <strong>Carlos Frederico Barboza de Souza</strong>
+                    (PUC-Minas); Profa. Dra.
+                    <strong>Soraya Ferreira</strong> (PUC-Minas) <br />
+                    <strong>Coordenação:</strong> Prof. Dr.
+                    <strong>Walter Boechat</strong> (PPGBIOS / UFRJ)
                   </p>
                 </div>
               </div>
@@ -778,7 +760,7 @@
               <div class="timeline__event__icon">
                 <i class="lni lni-coffee-cup"></i>
               </div>
-              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__date">12:00 - 14:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">
                   Intervalo
@@ -822,9 +804,7 @@
                 <div class="timeline__event__description">
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
+
                   </p>
                 </div>
               </div>
@@ -841,7 +821,7 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__date">14:00 - 16:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">Mesa virtual</div>
                 <div class="timeline__event__description">
@@ -866,7 +846,7 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__date">16:00 - 18:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">Mesa virtual</div>
                 <div class="timeline__event__description">
@@ -892,15 +872,28 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__date">10:00 - 12:00</div>
               <div class="timeline__event__content">
-                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__title">
+                  Mesa virtual <br />
+                  <p class="tema">
+                    Possibilidades polifônicas da psicologia junguiana
+                  </p>
+                </div>
                 <div class="timeline__event__description">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
+                    <strong>Comunicação:</strong> Mestra
+                    <strong>Renata Mota</strong> (PPGP / UNIFOR); Doutoranda
+                    <strong>Raphaella Paiva</strong> (PPGP / UNIFOR); Doutorando
+                    <strong>Heráclito Aragão</strong> (PPGP / UNIFOR) <br />
+                    <strong>Coordenação:</strong>
+                    Prof. Dr.
+                    <strong>José Clerton de Oliveira Martins</strong> (PPGP /
+                    UNIFOR)
+                    <br>
+                    <p class="mt-2">
+                      <a class="text-red-400"  target="_blank" href="https://meet.google.com/tfc-xrfo-ybu"><strong>Link da Sala Virtual</strong></a>
+                    </p>
                   </p>
                 </div>
               </div>
@@ -917,7 +910,7 @@
               <div class="timeline__event__icon">
                 <i class="lni lni-coffee-cup"></i>
               </div>
-              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__date">12:00 - 14:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">
                   Intervalo
@@ -961,9 +954,6 @@
                 <div class="timeline__event__description">
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
                   </p>
                 </div>
               </div>
@@ -980,7 +970,7 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__date">14:00 - 16:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">Mesa virtual</div>
                 <div class="timeline__event__description">
@@ -1005,7 +995,7 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__date">16:00 - 18:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">Mesa virtual</div>
                 <div class="timeline__event__description">
@@ -1031,15 +1021,27 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__date">10:00 - 12:00</div>
               <div class="timeline__event__content">
-                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__title">
+                  Mesa virtual <br />
+                  <p class="tema">
+                    Caminho, pertencimento e encruzilhadas da Religião no Brasil
+                  </p>
+                </div>
                 <div class="timeline__event__description">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
+                    <strong>Comunicação:</strong> Mestrando
+                    <strong>Wilmar Carvalho</strong> (PPGPSI / UFRRJ);
+                    Doutoranda <strong>Kelly Xavier</strong> (PPGPSI / UFRRJ);
+                    Doutorando <strong>Tione Echkardt</strong> (PPGPSI / UFRRJ)
+                    <br />
+                    <strong>Coordenação:</strong> Prof. Dr.
+                    <strong>Nilton Sousa da Silva</strong> (PPGPSI / UFRRJ)
+                 <br>
+                <p class="mt-2">                 
+                  <a class="text-red-400"  target="_blank" href="https://meet.google.com/ghy-svgf-jif"><strong>Link da Sala Virtual</strong></a>
+                </p>
                   </p>
                 </div>
               </div>
@@ -1056,7 +1058,7 @@
               <div class="timeline__event__icon">
                 <i class="lni lni-coffee-cup"></i>
               </div>
-              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__date">12:00 - 14:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">
                   Intervalo
@@ -1100,9 +1102,6 @@
                 <div class="timeline__event__description">
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
                   </p>
                 </div>
               </div>
@@ -1119,7 +1118,7 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__date">14:00 - 16:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">Mesa virtual</div>
                 <div class="timeline__event__description">
@@ -1144,15 +1143,17 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__date">16:00 - 18:00</div>
               <div class="timeline__event__content">
-                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__title">
+                  Mesa virtual <br />
+                  <p class="tema">
+                  </p>
+                </div>
                 <div class="timeline__event__description">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!
+          
                   </p>
                 </div>
               </div>
@@ -1170,15 +1171,25 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">12:00 - 15:00</div>
+              <div class="timeline__event__date">10:00 - 12:00</div>
               <div class="timeline__event__content">
-                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__title">
+                  Mesa virtual <br />
+                  <p class="tema">
+                    Caminhos de PEABIRU: aprendizagens interculturais
+                  </p>
+                </div>
                 <div class="timeline__event__description">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
+                    <strong>Comunicação:</strong> Doutorando
+                    <strong>Onório Moura</strong>; Pós-doc.
+                    <strong>Fátima Rosane Silveira Sousa</strong>; Dra
+                    <strong>Maria Cristina Graeff</strong> <br />
+                    <strong>Coordenação:</strong> Profa. Dra.
+                    <strong>Ana Luisa Teixeira de Menezes</strong>
+                    <p class="mt-2">
+                      <a class="text-red-400"  target="_blank" href="https://meet.google.com/ogv-huwz-itq"><strong>Link da Sala Virtual</strong></a>
+                    </p>
                   </p>
                 </div>
               </div>
@@ -1195,7 +1206,7 @@
               <div class="timeline__event__icon">
                 <i class="lni lni-coffee-cup"></i>
               </div>
-              <div class="timeline__event__date">15:00 - 16:00</div>
+              <div class="timeline__event__date">12:00 - 14:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">
                   Intervalo
@@ -1239,9 +1250,6 @@
                 <div class="timeline__event__description">
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
                   </p>
                 </div>
               </div>
@@ -1258,15 +1266,23 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">16:00 - 17:00</div>
+              <div class="timeline__event__date">14:00 - 16:00</div>
               <div class="timeline__event__content">
-                <div class="timeline__event__title">Mesa virtual</div>
+                <div class="timeline__event__title">
+                  Mesa virtual <br />
+                  <p class="tema">
+                    Psicologia junguiana, mangá e a imigração japonesa na
+                    Amazônia Brasileira
+                  </p>
+                </div>
                 <div class="timeline__event__description">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                    iure veniam corporis incidunt reprehenderit accusantium id
-                    aut architecto harum quidem dolorem in!
+                    <strong>Comunicação:</strong> Prof. Dr.
+                    <strong>Cacio José Ferreira</strong> (PPGL / UFAM)
+                    ; Publicitário e escritor
+                    <strong>Marcelo Baglione</strong> (Pesquisador) <br />
+                    <strong>Coordenação:</strong> Prof. Dr.
+                    <strong>Daniel Barreiros</strong> (PPGHC / UFRJ)
                   </p>
                 </div>
               </div>
@@ -1283,7 +1299,7 @@
               <div class="timeline__event__icon">
                 <i class="fas fa-chalkboard-teacher"></i>
               </div>
-              <div class="timeline__event__date">17:00 - 18:00</div>
+              <div class="timeline__event__date">16:00 - 18:00</div>
               <div class="timeline__event__content">
                 <div class="timeline__event__title">Mesa virtual</div>
                 <div class="timeline__event__description">

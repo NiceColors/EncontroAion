@@ -10,6 +10,11 @@ html {
   font-size: 14px;
 }
 
+.tema{
+  text-transform: none !important;
+  margin-bottom: 5px;
+}
+
 .navbar{
   display: flex;
   justify-content: center;
@@ -472,3 +477,4 @@ h2 {
     left: 100%;
   }
 }
+

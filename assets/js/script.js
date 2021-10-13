@@ -98,3 +98,8 @@ var $grid = $('.dias').isotope({
   });
   
   })();
+
+
+var vid = document.getElementById("musica");
+vid.volume = 0.2;
+vid.play()

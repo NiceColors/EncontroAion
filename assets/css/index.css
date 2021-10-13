@@ -10,29 +10,53 @@ html {
   font-size: 14px;
 }
 
-.regiao{
+audio::-webkit-media-controls-enclosure {
+  background-color: #ffffff00;
+}
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-rewind-button,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-fullscreen-button,
+audio::-webkit-media-controls-rewind-button,
+audio::-webkit-media-controls-return-to-realtime-button,
+audio::-webkit-media-controls-toggle-closed-captions-button {
+  display: none;
+}
+
+#musica {
+  position: fixed;
+  bottom: 0;
+  left: 0px;
+  min-width: 90vw;
+  height: 50px;
+}
+
+.regiao {
   align-items: center;
   margin: 0 auto;
   margin-top: 10px;
 }
 
-.regiao-nordeste{
+.regiao-nordeste {
   width: 30%;
 }
 
-.tema{
+.tema {
   text-transform: none !important;
   margin-bottom: 5px;
 }
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 8vh;
 }
 
-.titulo{
+.titulo {
   font-size: 1.5rem;
 }
 
@@ -89,7 +113,7 @@ html {
   pointer-events: none;
 }
 
-.links{
+.links {
   position: relative;
 }
 
@@ -252,6 +276,7 @@ h2 {
   border-radius: 6px;
   align-self: center;
   width: 50vw;
+  right: 13px;
 }
 .timeline__event:nth-child(2n + 1) {
   flex-direction: row-reverse;
@@ -417,7 +442,13 @@ h2 {
 
 @media (max-width: 986px) {
   .hero {
-    height: 60vh;
+    height: 40vh;
+  }
+
+
+
+  .regiao-nordeste {
+    width: 60%;
   }
 
   .hero-img {
@@ -426,6 +457,7 @@ h2 {
   .timeline__event {
     flex-direction: column;
     align-self: center;
+    width: 90vw;
   }
   .timeline__event__content {
     width: 100%;
@@ -487,4 +519,3 @@ h2 {
     left: 100%;
   }
 }
-

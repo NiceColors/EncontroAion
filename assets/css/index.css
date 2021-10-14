@@ -13,6 +13,7 @@ html {
 audio::-webkit-media-controls-enclosure {
   background-color: #ffffff00;
 }
+
 audio::-webkit-media-controls-timeline,
 audio::-webkit-media-controls-rewind-button,
 audio::-webkit-media-controls-seek-back-button,
@@ -445,8 +446,6 @@ h2 {
     height: 40vh;
   }
 
-
-
   .regiao-nordeste {
     width: 60%;
   }
@@ -507,6 +506,7 @@ h2 {
 @keyframes fillTop {
   100% {
     top: 100%;
+    height: 166px;
   }
 }
 @-webkit-keyframes fillLeftOdd {

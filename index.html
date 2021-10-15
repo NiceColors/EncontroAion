@@ -2,9 +2,12 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />  
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <meta name="theme-color" content="#fff" />
+  <meta name="description" content="Site desenvolvido por Victor Batista" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
@@ -59,7 +62,7 @@
                       hover:text-green-500
                       transition
                       duration-300
-                    ">Programação</a>
+                    ">Programa&ccedil;&atilde;o</a>
               </div>
               <!-- <div class="links">
                 <a href="" class="
@@ -85,7 +88,7 @@
                   hover:bg-green-400
                   transition
                   duration-300
-                ">Inscrição</a>
+                ">Inscri&ccedil;&atilde;o</a>
           </div>
           <div class="md:hidden flex items-center">
             <button class="outline-none mobile-menu-button">
@@ -113,7 +116,8 @@
             items-center
             justify-center
           ">
-        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50">
+        </div>
 
         <div class="
               modal-container
@@ -149,7 +153,8 @@
           </div>
 
           <div class="modal-content py-4 text-left px-6">
-            <form class="bg-white rounded px-8 pt-6 pb-8 mb-4">
+            <h1 class="lg:text-4xl text-3xl mb-12 text-center md:text-4xl font-semibold">Inscri&ccedil;&atilde;o</h1>
+            <form id="inscForm" method="POST" action="" class="bg-white rounded px-8 pt-6 pb-8 mb-4">
               <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                   Nome completo
@@ -165,7 +170,7 @@
                       text-gray-700
                       leading-tight
                       focus:outline-none focus:shadow-outline
-                    " id="username" type="text" />
+                    " id="nome" name="nome" required type="text" />
               </div>
               <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="CPF">
@@ -183,36 +188,12 @@
                       mb-3
                       leading-tight
                       focus:outline-none focus:shadow-outline
-                    " id="password" type="text" />
+                    " id="escolaridade" name="escolaridade"  required type="text" />
               </div>
-              <!-- <div class="mb-4">
-                  <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
-                    for="CPF"
-                  >
-                    CPF
-                  </label>
-                  <input
-                    class="
-                      shadow
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      mb-3
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
-                    id="password"
-                    type="text"
-                  />
-                </div> -->
+              
               <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="CPF">
-                  Data de nascimento
+                  Email
                 </label>
                 <input class="
                       shadow
@@ -226,7 +207,25 @@
                       mb-3
                       leading-tight
                       focus:outline-none focus:shadow-outline
-                    " id="password" type="date" />
+                    " id="email" name="email" required type="email" />
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="CPF">
+                  Telefone
+                </label>
+                <input class="
+                      shadow
+                      appearance-none
+                      border
+                      rounded
+                      w-full
+                      py-2
+                      px-3
+                      text-gray-700
+                      mb-3
+                      leading-tight
+                      focus:outline-none focus:shadow-outline
+                    " id="telefone" name="telefone" required type="text" />
               </div>
               <div class="flex items-center justify-between">
                 <button class="
@@ -239,7 +238,7 @@
                       px-4
                       rounded
                       focus:outline-none focus:shadow-outline
-                    " type="submit" disabled>
+                    " type="submit">
                   Confirmar
                 </button>
               </div>
@@ -271,7 +270,7 @@
                   font-semibold
                   transition
                   duration-300
-                ">Calendário</a>
+                ">Calend&aacute;rio</a>
           </li>
           <li>
             <a href="#about" class="
@@ -284,6 +283,19 @@
                   transition
                   duration-300
                 ">Sobre</a>
+          </li>
+          <li>
+            <a class="
+            modal-open
+            block
+            text-sm
+            px-2
+            py-4
+            hover:bg-green-500 hover:color-white
+            font-semibold
+            transition
+            duration-300
+          ">Inscri&ccedil;&atilde;o</a>
           </li>
         </ul>
       </div>
@@ -306,13 +318,13 @@
           <div class="space-y-6">
             <h1 class="text-3xl sm:text-4xl font-semibold">
               I ENCONTRO DO GT-AION / ANPEPP:
-              <br />Interdisciplinaridade da Pesquisa em Psicologia Analítica
+              <br />Interdisciplinaridade da Pesquisa em Psicologia Anal&iacute;tica
               no Brasil (Norte, Nordeste, Centro-Oeste, Sudeste e Sul)
               <funciona-teste />
             </h1>
 
             <!-- <p class="max-w-md text-xl">
-                Psicologia complexa & Interconexões acadêmicas do GT-AION no
+                Psicologia complexa & Interconexões acad&Ecirc;micas do GT-AION no
                 Brasil: Norte, Nordeste, Centro-Oeste, Sudeste e Sul
               </p> -->
           </div>
@@ -328,7 +340,7 @@
                   text-white
                   font-semibold
                 ">
-              Programação
+              Programa&ccedil;&atilde;o
             </a>
           </div>
         </div>
@@ -354,7 +366,7 @@
       <div class="container mx-auto px-4 py-12 sm:py-16 md:py-20 xl:py-28" id="programacao">
         <div class="space-y-4 mb-10 lg:mb-16">
           <h2 class="text-4xl text-center md:text-5xl font-semibold">
-            Programação do Evento
+            Programa&ccedil;&atilde;o do Evento
           </h2>
           <p class="text-lg md:max-w-md mx-auto">
             O Evento vai ocorrer entre os dias 18 e 22 de Outubro
@@ -480,19 +492,22 @@
             <div class="timeline__event__icon">
               <i class="fas fa-chalkboard-teacher"></i>
             </div>
-            <div class="timeline__event__date">10:00 - 12:00</div>
+            <div class="timeline__event__date">10:00 - 12:00</div> 	
             <div class="timeline__event__content">
-              <div class="timeline__event__title">Mesa virtual <br> <p class="tema">Psicologia Analítica muito além da prática clínica</p></div>
+              <div class="timeline__event__title">Mesa virtual <br> <p class="tema">Psicologia Anal&iacute;tica muito al&eacute;m da pr&aacute;tica cl&iacute;nica</p></div>
               <div class="timeline__event__description">
                 <p class="">
-                  <strong>Comunicação:</strong> <br> Prof. Dr. <strong>José Aparecido Celorio</strong> (UNIPAZ-Goiânia)
-                  ; <br> Drª <strong>Regina Cruvinel Maia</strong> (UNIPAZ-Goiânia)
-                  ; <br> Doutoranda <strong>Cláudia Elizabete C. M. Mondini</strong> (PPGPSI / UFRRJ)
+                  <strong>Comunica&ccedil;&atilde;o:</strong> <br> Prof. Dr. <strong>Jos&eacute; Aparecido Celorio</strong> (UNIPAZ-Goi&acirc;nia)
+                  ; <br> Dr&ordf; <strong>Regina Cruvinel Maia</strong> (UNIPAZ-Goi&acirc;nia)
+                  ; <br> Doutoranda <strong>Cl&aacute;udia Elizabete C. M. Mondini</strong> (PPGPSI / UFRRJ)
                   ; 
                   <p class="mt-2 ">
-                    <strong>Coordenação:</strong> <br> Profª. Drª. <strong>Sonia Maria Bufarah Tommasi</strong> (UNIPAZ-Goiânia)
+                    <strong>Coordena&ccedil;&atilde;o:</strong> <br> Prof&ordf;. Dr&ordf;. <strong>Sonia Maria Bufarah Tommasi</strong> (UNIPAZ-Goi&acirc;nia)
                   </p> 
-                  
+                </p>
+                <p class="mt-2">
+                  <a class="text-red-400" target="_blank" href="https://us02web.zoom.us/j/84347301048"><strong>Link da
+                      Sala Virtual</strong></a>
                 </p>
               </div>
             </div>
@@ -545,17 +560,21 @@
             <div class="timeline__event__content">
               <div class="timeline__event__title">
                 Mesa virtual
-                <p class="tema">Mitologia, símbolo e transformação da Alma</p>
+                <p class="tema">Mitologia, s&iacute;mbolo e transforma&ccedil;&atilde;o da Alma</p>
               </div>
               <div class="timeline__event__description">
                 <p>
-                  <strong>Comunicação:</strong> <br> Esp. Sandra Morales Mercado; <br>
+                  <strong>Comunica&ccedil;&atilde;o:</strong> <br> Esp. Sandra Morales Mercado; <br>
                   Esp. Nelson Nunes; <br> Esp. Renato Santiago Bandola de Oliveira 
 
                   <p class="mt-2">
-                    <strong>Coordenação: <br> </strong>Prof. Dr.
-                    <strong>José Jorge M. Zacharias</strong> (AJB)
+                    <strong>Coordena&ccedil;&atilde;o: <br> </strong>Prof. Dr.
+                    <strong>Jos&eacute; Jorge M. Zacharias</strong> (AJB)
                   </p>
+                </p>
+                <p class="mt-2">
+                  <a class="text-red-400" target="_blank" href="https://meet.google.com/sps-bhyy-zyu"><strong>Link da
+                      Sala Virtual</strong></a>
                 </p>
               </div>
             </div>
@@ -564,7 +583,7 @@
       </div>
       <div class="nordeste dia-item" data-category="nordeste">
         <h1 class="lg:text-4xl text-3xl mb-24 text-center md:text-4xl font-semibold">
-          Terça-feira, 19 de Outubro
+          Ter&ccedil;a-feira, 19 de Outubro
         </h1>
         <div class="regiao-pai">
           <img class="regiao regiao-nordeste" src="./assets/img/mapa-nordeste.png" alt="">
@@ -579,105 +598,32 @@
               <div class="timeline__event__title">
                 Mesa virtual <br />
                 <p class="tema">
-                  A psicologia complexa e o PPG em Ciência da Religião da
+                  A psicologia complexa e o PPG em Ci&ecirc;ncia da Religi&atilde;o da
                   PUC-Minas
                 </p>
               </div>
               <div class="timeline__event__description">
                 <p>
-                  <strong>Comunicação: <br> </strong> Prof. Dr.
+                  <strong>Comunica&ccedil;&atilde;o: <br> </strong> Prof. Dr.
                   <strong>Carlos Frederico Barboza de Souza</strong>
                   (PUC-Minas); <br> Profa. Dra.
                   <strong>Soraya Ferreira</strong> (PUC-Minas) 
 
                   <p class="mt-2">
-                    <strong>Coordenação: <br> </strong>Prof. Dr.
+                    <strong>Coordena&ccedil;&atilde;o: <br> </strong>Prof. Dr.
                     <strong>Walter Boechat</strong> (AJB)
                   </p>
 
                 </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-1s
-                timeline__event--type2
-              ">
-            <div class="timeline__event__icon">
-              <i class="lni lni-coffee-cup"></i>
-            </div>
-            <div class="timeline__event__date">12:00 - 14:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">
-                Intervalo
-                <span class="relogio">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                    <rect width="16" height="16" x="4" y="4" stroke="#0A0A30" stroke-width="1.5" rx="8" />
-                    <path stroke="#0A0A30" stroke-linecap="round" stroke-width="1.5" d="M12.021 12l2.325 2.325" />
-                    <path stroke="#265BFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M12.021 12V6.84" style="
-                          animation: rotate 2s linear infinite both;
-                          transform-origin: center;
-                        " />
-                  </svg>
-                </span>
-              </div>
-              <div class="timeline__event__description">
-                <p>
 
+                <p class="mt-2">
+                  <a class="text-red-400" target="_blank" href="https://us02web.zoom.us/j/2486605119"><strong>Link da
+                      Sala Virtual</strong></a>
                 </p>
               </div>
             </div>
           </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-2s
-                timeline__event--type3
-              ">
-            <div class="timeline__event__icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="timeline__event__date">14:00 - 16:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">Mesa virtual</div>
-              <div class="timeline__event__description">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                  iure veniam corporis incidunt reprehenderit accusantium id
-                  aut architecto harum quidem dolorem in!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-3s
-                timeline__event--type1
-              ">
-            <div class="timeline__event__icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="timeline__event__date">16:00 - 18:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">Mesa virtual</div>
-              <div class="timeline__event__description">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                  iure veniam corporis incidunt reprehenderit accusantium id
-                  aut architecto harum quidem dolorem in!
-                </p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
       <div class="centro-oeste dia-item" data-category="centro-oeste">
@@ -702,97 +648,19 @@
               </div>
               <div class="timeline__event__description">
                 <p>
-                  <strong>Comunicação: <br> </strong> Mestra
+                  <strong>Comunica&ccedil;&atilde;o: <br> </strong> Mestra
                   <strong>Renata Mota</strong> (PPGP / UNIFOR);<br> Doutoranda
                   <strong>Raphaella Paiva</strong> (PPGP / UNIFOR);<br> Doutorando
-                  <strong>Heráclito Aragão</strong> (PPGP / UNIFOR) <br />
+                  <strong>Her&aacute;clito Arag&atilde;o</strong> (PPGP / UNIFOR) <br />
                   <p class="mt-2">
-                    <strong>Coordenação: <br> </strong>
+                    <strong>Coordena&ccedil;&atilde;o: <br> </strong>
                     Prof. Dr.
-                    <strong>José Clerton de Oliveira Martins</strong> (PPGP / UNIFOR) 
+                    <strong>Jos&eacute; Clerton de Oliveira Martins</strong> (PPGP / UNIFOR) 
                   </p>
-                <p class="mt-2">
-                  <a class="text-red-400" target="_blank" href="https://meet.google.com/tfc-xrfo-ybu"><strong>Link da
-                      Sala Virtual</strong></a>
-                </p>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-1s
-                timeline__event--type2
-              ">
-            <div class="timeline__event__icon">
-              <i class="lni lni-coffee-cup"></i>
-            </div>
-            <div class="timeline__event__date">12:00 - 14:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">
-                Intervalo
-                <span class="relogio">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                    <rect width="16" height="16" x="4" y="4" stroke="#0A0A30" stroke-width="1.5" rx="8" />
-                    <path stroke="#0A0A30" stroke-linecap="round" stroke-width="1.5" d="M12.021 12l2.325 2.325" />
-                    <path stroke="#265BFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M12.021 12V6.84" style="
-                          animation: rotate 2s linear infinite both;
-                          transform-origin: center;
-                        " />
-                  </svg>
-                </span>
-              </div>
-              <div class="timeline__event__description">
-                <p>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-2s
-                timeline__event--type3
-              ">
-            <div class="timeline__event__icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="timeline__event__date">14:00 - 16:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">Mesa virtual</div>
-              <div class="timeline__event__description">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                  iure veniam corporis incidunt reprehenderit accusantium id
-                  aut architecto harum quidem dolorem in!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-3s
-                timeline__event--type1
-              ">
-            <div class="timeline__event__icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="timeline__event__date">16:00 - 18:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">Mesa virtual</div>
-              <div class="timeline__event__description">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                  iure veniam corporis incidunt reprehenderit accusantium id
-                  aut architecto harum quidem dolorem in!
+                  <p class="mt-2">
+                    <a class="text-red-400" target="_blank" href="https://meet.google.com/tfc-xrfo-ybu"><strong>Link da
+                        Sala Virtual</strong></a>
+                  </p>
                 </p>
               </div>
             </div>
@@ -816,18 +684,18 @@
               <div class="timeline__event__title">
                 Mesa virtual <br />
                 <p class="tema">
-                  Caminho, pertencimento e encruzilhadas da Religião no Brasil
+                  Caminho, pertencimento e encruzilhadas da Religi&atilde;o no Brasil
                 </p>
               </div>
               <div class="timeline__event__description">
                 <p>
-                  <strong>Comunicação: <br> </strong> Mestrando
+                  <strong>Comunica&ccedil;&atilde;o: <br> </strong> Mestrando
                   <strong>Wilmar Carvalho</strong> (PPGPSI / UFRRJ);<br>
                   Doutoranda <strong>Kelly Xavier</strong> (PPGPSI / UFRRJ);<br>
-                  Prof. Ms. <strong>Bruno Correia da Mota</strong> (UB / São Paulo)
+                  Prof. Ms. <strong>Bruno Correia da Mota</strong> (UB / S&atilde;o Paulo)
                 
                   <p class="mt-2">
-                    <strong>Coordenação:<br></strong> Prof. Dr.
+                    <strong>Coordena&ccedil;&atilde;o:<br></strong> Prof. Dr.
                     <strong>Nilton Sousa da Silva</strong> (PPGPSI / UFRRJ)
                   </p>
                   <p class="mt-2">
@@ -835,88 +703,6 @@
                       <strong>Link da Sala Virtual</strong>
                     </a>
                   </p>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-1s
-                timeline__event--type2
-              ">
-            <div class="timeline__event__icon">
-              <i class="lni lni-coffee-cup"></i>
-            </div>
-            <div class="timeline__event__date">12:00 - 14:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">
-                Intervalo
-                <span class="relogio">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-                    <rect width="16" height="16" x="4" y="4" stroke="#0A0A30" stroke-width="1.5" rx="8" />
-                    <path stroke="#0A0A30" stroke-linecap="round" stroke-width="1.5" d="M12.021 12l2.325 2.325" />
-                    <path stroke="#265BFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M12.021 12V6.84" style="
-                          animation: rotate 2s linear infinite both;
-                          transform-origin: center;
-                        " />
-                  </svg>
-                </span>
-              </div>
-              <div class="timeline__event__description">
-                <p>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-2s
-                timeline__event--type3
-              ">
-            <div class="timeline__event__icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="timeline__event__date">14:00 - 16:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">Mesa virtual</div>
-              <div class="timeline__event__description">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                  iure veniam corporis incidunt reprehenderit accusantium id
-                  aut architecto harum quidem dolorem in!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-3s
-                timeline__event--type1
-              ">
-            <div class="timeline__event__icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="timeline__event__date">16:00 - 18:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">
-                Mesa virtual <br />
-                <p class="tema">
-                </p>
-              </div>
-              <div class="timeline__event__description">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
-                  asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum
-                  quidem dolorem in!
-
                 </p>
               </div>
             </div>
@@ -945,18 +731,18 @@
               </div>
               <div class="timeline__event__description">
                 <p>
-                  <strong>Comunicação:<br></strong> Doutorando
-                  <strong>Onório Moura</strong> (POGEdu / Unisc);<br> Pós-doc.
-                  <strong>Fátima Rosane Silveira Sousa</strong> (POGEdu / Unisc);<br> Dra
+                  <strong>Comunica&ccedil;&atilde;o:<br></strong> Doutorando
+                  <strong>On&oacute;rio Moura</strong> (POGEdu / Unisc);<br> P&oacute;s-doc.
+                  <strong>F&aacute;tima Rosane Silveira Sousa</strong> (POGEdu / Unisc);<br> Dra
                   <strong>Maria Cristina Graeff</strong> (POGEdu / Unisc)<br />
 
                   <p class="mt-2">
-                    <strong>Coordenação:<br></strong> Profa. Dra.
+                    <strong>Coordena&ccedil;&atilde;o:<br></strong> Profa. Dra.
                     <strong>Ana Luisa Teixeira de Menezes</strong> (POGEdu / Unisc)
                   </p>
 
                   <p class="mt-2">
-                    <a class="text-red-400" target="_blank" href="https://meet.google.com/ogv-huwz-itq"><strong>Link da
+                    <a class="text-red-400" target="_blank" href="https://meet.google.com/bjf-ytqz-ycx"><strong>Link da
                         Sala Virtual</strong></a>
                   </p>
                 </p>
@@ -1010,19 +796,19 @@
               <div class="timeline__event__title">
                 Mesa virtual <br />
                 <p class="tema">
-                  Psicologia junguiana, mangá e a imigração japonesa na
+                  Psicologia junguiana, mang&aacute; e a imigra&ccedil;&atilde;o japonesa na
                   Amazônia Brasileira
                 </p>
               </div>
               <div class="timeline__event__description">
                 <p>
-                  <strong>Comunicação:<br></strong> Prof. Dr.
-                  <strong>Cacio José Ferreira</strong> (PPGL / UFAM)
-                  ;<br> Publicitário e escritor
+                  <strong>Comunica&ccedil;&atilde;o:<br></strong> Prof. Dr.
+                  <strong>Cacio Jos&eacute; Ferreira</strong> (PPGL / UFAM)
+                  ;<br> Publicit&aacute;rio e escritor
                   <strong>Marcelo Baglione</strong> (Pesquisador) <br />
 
                   <p class="mt-2">
-                    <strong>Coordenação:<br></strong> Prof. Dr.
+                    <strong>Coordena&ccedil;&atilde;o:<br></strong> Prof. Dr.
                     <strong>Daniel Barreiros</strong> (PPGHC / UFRJ)
                   </p>
                 </p>
@@ -1030,29 +816,6 @@
                 <p class="mt-2">
                   <a class="text-red-400" target="_blank" href="https://meet.google.com/ogv-huwz-itq"><strong>Link da
                       Sala Virtual</strong></a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="
-                timeline__event
-                animated
-                fadeInUp
-                delay-3s
-                timeline__event--type1
-              ">
-            <div class="timeline__event__icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="timeline__event__date">16:00 - 18:00</div>
-            <div class="timeline__event__content">
-              <div class="timeline__event__title">Mesa virtual</div>
-              <div class="timeline__event__description">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus
-                  iure veniam corporis incidunt reprehenderit accusantium id
-                  aut architecto harum quidem dolorem in!
                 </p>
               </div>
             </div>
@@ -1079,5 +842,6 @@
   crossorigin="anonymous"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/sending.js"></script>
 
 </html>

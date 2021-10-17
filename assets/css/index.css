@@ -27,6 +27,17 @@ audio::-webkit-media-controls-toggle-closed-captions-button {
   display: none;
 }
 
+#sobre p{
+  text-indent: 2.5em;
+}
+
+#sobre ul{
+  margin-left: 4.25rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
 #musica {
   position: fixed;
   bottom: 0;
@@ -208,7 +219,12 @@ footer p {
 }
 
 .hero {
-  height: 80vh;
+  height: 100vh;
+}
+
+.encontro{
+  width: 40%;
+  margin-bottom: 20px;
 }
 
 .dia-item {
@@ -441,9 +457,27 @@ h2 {
   content: none;
 }
 
+@media (max-width: 660px){
+  .hero-text{
+    font-size: 16px !important;
+  }
+
+  .dias-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    
+  }
+
+  .dias-grid h4{
+    font-size: 16px;
+  }
+
+}
+
 @media (max-width: 986px) {
+
   .hero {
-    height: 40vh;
+    height: 30vh;
+    margin-bottom: 100px;
   }
 
   .regiao-nordeste {
